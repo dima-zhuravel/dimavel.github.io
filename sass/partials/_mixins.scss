@@ -1,0 +1,26 @@
+// Vendor prefixing for shorthand properties
+@mixin vendor-prefixes($property, $value) {
+        -webkit-#{$property}: $value;
+        -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+        -o-#{$property}: $value;
+}
+
+//Color for pockemons type
+@mixin colorType($color){
+    display: inline-block;
+    background: $color;
+    padding: 0px 10px;
+    margin: 2px;
+    font-family: 'ale';
+    @include vendor-prefixes(border-radius, 3px);
+    @include rem(font-size, 18px);
+}
+
+@mixin blue-gradient(){
+    background: rgb(247,251,252);
+    background: -moz-linear-gradient(top,  rgba(247,251,252,1) 0%, rgba(217,237,242,1) 40%, rgba(173,217,228,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+    background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=0 );
+}

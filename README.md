@@ -1,2 +1,7 @@
-# dimavel.github.io
-Kottans
+# Тестовое задание №1
+Использованные технологии:
+- jQuery
+- Sass
+- Susy grid
+
+Для просмотра выполненого задания нужно пройти по ссылке http://dimavel.github.io/

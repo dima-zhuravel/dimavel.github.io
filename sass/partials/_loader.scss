@@ -1,0 +1,65 @@
+.wrap_loader {
+      background: rgb(255, 255, 255);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      .loader {
+            -webkit-perspective: 1000px;  
+            width: 245px; height: 342px; 
+            margin: 30px auto;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            z-index: 1;
+      }
+}
+
+.card {
+  -webkit-transform-style: preserve-3d;
+  width: 245px; height: 342px;
+  position: relative;
+  -webkit-transform: rotateY(180deg);
+  -webkit-animation: spin 5s linear infinite;
+  background: #444;
+  border-radius: 10px;
+  
+}
+
+.face {
+  width: 245px; height: 342px;
+  position: absolute;
+}
+.front {width: 245px; height: 342px; box-shadow: 0px 0px 100px 10px white; }
+.back {
+  width: 245px; height: 342px;
+ background:url('http://i.ebayimg.com/00/s/OTAyWDY0Mg==/z/oKsAAOxydINSZphJ/$T2eC16Z,!ygFIjj,IQ7fBSZphI(Lvg~~60_1.JPG?set_id=2');
+  -webkit-transform: translateZ(-3px) rotateY(180deg);
+  background-size: cover;
+  border-radius: 11px;
+}
+
+
+.hit {
+  background: url('http://assets21.pokemon.com/assets/cms2/img/cards/web/PL1/PL1_EN_129.png')
+}
+.gen {
+  background: url('http://940ee6dce6677fa01d25-0f55c9129972ac85d6b1f4e703468e6b.r99.cf2.rackcdn.com/products/pictures/149065.jpg');
+  background-size: cover;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg)
+  }
+  
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+

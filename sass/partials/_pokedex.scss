@@ -1,0 +1,288 @@
+/*----------------------------------------------------
+    Fonts
+----------------------------------------------------*/
+@font-face {
+    font-family: 'hollow';
+    src: url('../fonts/Pokemon_Hollow/Pokemon_Hollow.eot');
+    src: local('☺'), url('../fonts/Pokemon_Hollow/Pokemon_Hollow.woff') format('woff'), url('../fonts/Pokemon_Hollow/Pokemon_Hollow.ttf') format('truetype'), url('../fonts/Pokemon_Hollow/Pokemon_Hollow.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ale';
+    src: url('../fonts/alefont/Skinny.eot');
+    src: local('☺'), url('../fonts/alefont/Skinny.woff') format('woff'), url('../fonts/alefont/Skinny.ttf') format('truetype'), url('../fonts/alefont/Skinny.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*----------------------------------------------------
+General styles
+----------------------------------------------------*/
+.clearfix{
+    clear: both;
+}
+.hide{
+    display: none;
+}
+
+/*----------------------------------------------------
+
+----------------------------------------------------*/
+ 
+html {
+  @include rem-baseline;
+}
+
+.container {
+    @include container(80em);
+}
+
+header {
+    .title {
+        text-align: center;
+        font-family: 'hollow';
+        padding: 30px 0;
+        text-transform: capitalize;
+        color: $blue;
+        @include rem(font-size, 60px);
+    }
+}
+
+.pockemon {
+    @include span(16);
+    &__card{
+        @include span(8);
+        min-height: 300px; 
+        border: 1px solid $blue;  
+        margin-bottom: 2%;
+        @include blue-gradient();
+        @include vendor-prefixes(border-radius, 10px);
+        @include vendor-prefixes(box-sizing, border-box);  
+        &:nth-child(3n+3){
+            @include span(8 last);
+        }
+        &:hover{
+            cursor: pointer;
+            background: rgba(173,217,228,1);
+        }  
+    }
+    &__img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include vendor-prefixes(transform, translate(-50%, -50%));
+    }
+    &__wrapimg{
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: 10px auto;
+        background: #fff;
+        border: 1px solid #3563AD;
+        @include vendor-prefixes(border-radius, 10px);
+    }
+    &__name{
+        text-align: center;
+        font-family: 'ale';
+        margin: 0;
+        @include rem(font-size, 26px);
+    }
+    &__types{
+        margin: 0;
+        padding: 0 0 0 5px;
+    }
+    &__type{
+        list-style: none;
+        margin-right: 5px;
+        display: inline-block;
+        padding: 0px 10px;
+        margin: 2px;
+        font-family: 'ale';
+        @include vendor-prefixes(border-radius, 3px);
+        @include rem(font-size, 18px);
+    }
+    &__fire{background:#FF7878;}
+    &__water{background:#789CFF;}
+    &__grass{background:#83FF78;}
+    &__normal{background:#878787;}
+    &__poison{background:#78FFCE;}
+    &__bug{background:#FFA578;}
+    &__electric{background:#FFFD78;}
+    &__ground{background:#947344;}
+    &__flying{background:#78FFFD;}
+    &__fighting{background:#A378FF;}
+    &__rock{background:#FF78F4;}
+    &__ghost{background:#8F78FF;}
+    &__steel{background:#759E5C;}
+    &__ice{background:#5C8D9E;}
+    &__dragon{background:#9E5C85;}
+    &__fairy{background:#5C9E65;}
+    &__unknown{background:#BF17BF;}
+    &__shadow{background:#BABF17;}
+    &__psychic{background:#BF8417;}
+    &__dark{background:#454545;}
+}
+
+.ability {
+    @include span(8 last);
+    position: relative;
+    &__card{
+        position: fixed;
+        @include span(4);
+        min-height: 300px;
+        top: 50%;
+        border: 1px solid $blue;  
+        margin-left: 2.8%; 
+        @include blue-gradient();
+        @include vendor-prefixes(border-radius, 10px);
+        transform: translateY(-50%);
+        @include vendor-prefixes(transform, translateY(-50%));
+        @include vendor-prefixes(box-sizing, border-box);  
+        &:nth-child(3n+3){
+            @include span(8 last);
+        }  
+    }
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    height: 70px;
+    outline: none;
+    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    text-transform: capitalize;
+    font-family: 'ale';
+    border: 1px solid $blue;
+    color: $blue;
+    @include blue-gradient();
+    @include rem(font-size, 32px);
+    line-height: 70px;
+    &:hover{
+        background: $blue;
+        color: #fff;
+    }
+}
+
+.singlePockName{
+    text-align: center;
+    font-family: 'ale';
+    margin: 0;
+    font-weight: bold;
+    @include rem(font-size, 20px);
+    .singleId{
+        font-weight: bold;
+    }
+}
+
+.table{
+    width: 80%;
+    font-family: 'ale';
+    @include rem(font-size, 18px);
+    border: 1px solid #000;
+    margin: 10px auto 15px;
+    background: #fff;
+    td{
+        border: 1px solid #000;
+    }
+    .table-cell{
+        width: 45%;
+        padding-left: 5px;
+    }
+    .table-results{
+        width: 55%;
+        text-align: center;
+    }
+    .tableTypes{
+        padding: 5px; 
+        li{
+            list-style: none;
+            margin-right: 6px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+}
+
+@media(max-width: 1366px){
+    .pockemon {
+        @include span(14);
+    }
+    .ability {
+        @include span(10 last);
+        &__card{
+            @include span(6);
+            margin-left: 8%;
+        }
+    }
+}
+
+@media(max-width: 750px){
+    .pockemon {
+        @include span(12);
+        &__card{
+            @include span(14);
+            float: none;
+            margin: 10px auto !important;
+            overflow: hidden;
+            &:nth-child(3n+3){
+                @include span(14);
+                float: none;
+                margin: 10px auto !important;
+                overflow: hidden;
+            }  
+        }
+    }
+    .ability {
+        @include span(12 last);
+        &__card{
+            @include span(10);
+            margin-left: 0;
+        }
+    }
+    header {
+        .title {
+            background: #fff;
+            position: relative;
+            z-index: 9;
+        }
+    }
+}
+
+@media(max-width: 480px){
+    .pockemon {
+        @include span(12);
+        &__card{
+            @include span(20);
+            min-height: 260px;
+            float: none;
+            margin: 10px auto !important;
+            overflow: hidden;
+            &:nth-child(3n+3){
+                @include span(20);
+                float: none;
+                margin: 10px auto !important;
+                overflow: hidden;
+            }  
+        }
+        .btn {
+            width: 150px;
+        }
+    }
+    .ability {
+        @include span(12 last);
+        &__card{
+            @include span(10);
+            margin: 0;
+        }
+    }
+    header {
+        .title {
+            background: #fff;
+            position: relative;
+            z-index: 9;
+        }
+    }
+}

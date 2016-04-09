@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="wrap_loader">
+            <div class="loader"> 
+              <div class="card">    
+                <div class="face front hit"></div>
+                <div class="face back"></div>  
+              </div>
+            </div>
+        </div>
+
+        <header class="hide">
+            <h1 class="title">pokedex</h1>
+        </header>
+
+        <section class="pockemon hide">
+            <div class="pockemon__list"></div>
+            <button class="btn">load more</button>
+        </section>
+
+        <aside class="ability hide">
+            <div class="ability__card hide">
+                <div class="card__single"></div>
+                <table class="table">
+                    <tr>
+                        <td class="table-cell">Type</td>
+                        <td class="table-results table__type"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">Attack</td>
+                        <td class="table-results table__attack"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">Deffence</td>
+                        <td class="table-results table__defense"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">HP</td>
+                        <td class="table-results table__hp"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">SP Attack</td>
+                        <td class="table-results table__sp_attack"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">SP Defence</td>
+                        <td class="table-results table__sp_defence"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">Speed</td>
+                        <td class="table-results table__speed"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">Weight</td>
+                        <td class="table-results table__weight"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">Total</td>
+                        <td class="table-results table__total"></td>
+                    </tr>
+                </table>
+            </div>
+        </aside>
+    </div>
+
+    <!-- SCRIPT block -->
+    <script src="js/jquery-2.2.2.min.js"></script>  
+    <script src="js/custom.js"></script>  
+
+</body>
+</html>
